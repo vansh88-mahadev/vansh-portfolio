@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vansh Sharma | Portfolio</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background-color: #111;
+      color: white;
+      text-align: center;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 30px;
+      background: #000;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .hero {
+      padding: 100px 20px;
+      background: linear-gradient(45deg, #FFD700, #222);
+    }
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      animation: typing 3s steps(20) infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid white;
+      width: fit-content;
+      margin: 0 auto;
+    }
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+    .section {
+      padding: 50px 20px;
+    }
+    .poems {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .poem-card {
+      background: #222;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: left;
+      position: relative;
+    }
+    .poem-card button {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #FFD700;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    footer {
+      background: #000;
+      padding: 20px;
+      margin-top: 50px;
+    }
+    footer a {
+      color: #FFD700;
+      text-decoration: none;
+      font-size: 18px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="mahadev8.jpg" alt="Logo">
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#poems">Poems</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h1>Hi, I'm Vansh Sharma</h1>
+    <p>Welcome to my creative portfolio 🌟</p>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About Me</h2>
+    <p>I am Vansh Sharma, passionate about creativity and web design. This portfolio showcases my skills and love for art, tech, and literature.</p>
+  </section>
+
+  <section class="section" id="poems">
+    <h2>Poems ✨</h2>
+    <div class="poems">
+      <div class="poem-card">
+        <p id="p1">"Dream big, let fears decay,<br>The sun will rise to light your way."</p>
+        <button onclick="copyPoem('p1')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p2">"सपनों की राह में चलो,<br>हौंसले की छांव में पलो।"</p>
+        <button onclick="copyPoem('p2')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p3">"Stars shine brighter in the night,<br>Keep moving, you'll find the light."</p>
+        <button onclick="copyPoem('p3')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p4">"जीवन एक सफर है प्यारा,<br>हर पल को बनाओ तुम्हारा।"</p>
+        <button onclick="copyPoem('p4')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p5">"Hope whispers when all seems lost,<br>Hold on, no matter the cost."</p>
+        <button onclick="copyPoem('p5')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p6">"दिल से जो चाहा है वही पाया,<br>हौंसले ने मुझे रास्ता दिखाया।"</p>
+        <button onclick="copyPoem('p6')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p7">"Time flows like a gentle stream,<br>Wake up and chase your dream."</p>
+        <button onclick="copyPoem('p7')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p8">"हर मुश्किल में मुस्कुराओ,<br>जीवन को खुलकर अपनाओ।"</p>
+        <button onclick="copyPoem('p8')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p9">"Let kindness be your guiding star,<br>It will take you far."</p>
+        <button onclick="copyPoem('p9')">Copy</button>
+      </div>
+      <div class="poem-card">
+        <p id="p10">"सच्चाई का साथ कभी मत छोड़ो,<br>जीवन में जीत खुद-ब-खुद जोड़ो।"</p>
+        <button onclick="copyPoem('p10')">Copy</button>
+      </div>
+    </div>
+    <br>
+    <button onclick="downloadPoems()">Download All Poems (PDF)</button>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact Me</h2>
+    <p>Follow me on Instagram: <a href="https://instagram.com/vansh_raina_7" target="_blank">@vansh_raina_7</a></p>
+  </section>
+
+  <footer>
+    <p>© 2025 Vansh Sharma | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    function copyPoem(id) {
+      const poem = document.getElementById(id).innerText;
+      navigator.clipboard.writeText(poem);
+      alert('Poem copied!');
+    }
+
+    function downloadPoems() {
+      const poems = [
+        document.getElementById('p1').innerText,
+        document.getElementById('p2').innerText,
+        document.getElementById('p3').innerText,
+        document.getElementById('p4').innerText,
+        document.getElementById('p5').innerText,
+        document.getElementById('p6').innerText,
+        document.getElementById('p7').innerText,
+        document.getElementById('p8').innerText,
+        document.getElementById('p9').innerText,
+        document.getElementById('p10').innerText,
+      ].join("\n\n");
+      const blob = new Blob([poems], { type: 'application/pdf' });
+      const link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'poems.pdf';
+      link.click();
+    }
+  </script>
+</body>
+</html>
